@@ -1,0 +1,6 @@
+1. We need to save things on the stack before we call jal so that the data isn't lost, as the registers can be overwritten
+2. add t0, s0, x0 loads the address of s0 into t0, whereas lw t0, 0(s0) loads the value at s0. So this was a bug
+3. Reading the pointer means reading the value at the location of the pointer
+4. Need to increment the array by 4 bytes at a time
+5. Need to stop t1 from being overwritten
+6. Another bug regarding lw vs add
